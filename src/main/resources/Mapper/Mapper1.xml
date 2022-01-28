@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.Stu.Mapper.Mapper1">
+    <!--<cache-ref namespace=""/>    关联其它命名空间的缓存实例（因为不同命名空间的缓存使用不用缓存实例      -->
+    <insert id="insertTable1">
+        insert into table1 (field2)
+        values(#{field2})
+    </insert>
+
+    <select id="selectTable1" resultType="String">
+        select field2 from table1
+        where field1 = #{field1}
+    </select>
+</mapper>
